@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <>
-      <div className="hero w-full h-screen absolute top-0 left-0 -z-10"></div>
-      <div className="h-screen w-full flex flex-col items-center justify-center text-white">
+    <div className="bg-cover bg-center bg-no-repeat h-screen animation-slide">
+      <div className="h-screen w-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
         <h1 className="stretch text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
           DICE
         </h1>
@@ -31,6 +30,6 @@ export default function Hero() {
           className="absolute bottom-6 left-6"
         />
       </div>
-    </>
+    </div>
   );
 }

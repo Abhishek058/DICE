@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import video from "../assets/DiceVid.mp4";
+import video from "../assets/DiceVid2.mp4";
 
 export default function VideoIntro() {
   const videoRef = useRef(null);

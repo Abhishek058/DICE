@@ -21,7 +21,15 @@ const OnGoingEvents = [
     formlink: "https://forms.gle/GUpuxPVHiWgUavpG6",
   },
 ];
-const upcomingEvents = [];
+const upcomingEvents = [
+  {
+    name: "Event 2",
+    detail:
+      "Dr. Talwar's leadership was pivotal in ensuring the event's success. Gratitude is extended to all members of DICE, the expert panel, and participants for their invaluable contributions. Special thanks to the management for their unwavering support. Experience Engineer's Day Calibration: a celebration of collaboration, innovation, and real-world engineering challenges.",
+    date: "2024-04-15 to 2024-04-25",
+    formlink: "",
+  },
+];
 
 export default function Event() {
   return (
@@ -73,18 +81,27 @@ export default function Event() {
             {upcomingEvents.map((event, index) => (
               <div
                 key={index}
-                className="border border-red-500 rounded-lg p-6 duration-500 hover:bg-red-100 hover:scale-105 cursor-pointer"
+                className="border border-black hover:shadow-blue-300 shadow-xl rounded-lg p-6 duration-500 hover:scale-105"
               >
-                <h2 className="text-xl font-semibold mb-4">{event.title}</h2>
-                <p className="text-gray-600 mb-2">
-                  <strong>Faculty:</strong> {event.faculty}
-                </p>
-                <p className="text-gray-600 mb-2">
-                  <strong>Status:</strong> {event.status}
-                </p>
-                <p className="text-gray-600 mb-2">
-                  <strong>Database:</strong> {event.database}
-                </p>
+                <div className="h-4/5">
+                  <h2 className="text-xl font-semibold mb-4">{event.title}</h2>
+                  <p className="text-3xl mb-2">
+                    <strong>{event.name}</strong>
+                  </p>
+                  <p className="text-gray-600 mb-2">
+                    <strong>Date</strong> {event.date}
+                  </p>
+                  <p className="text-gray-600 mb-2">{event.detail}</p>
+                </div>
+                <div className="pt-8">
+                  <Link
+                    to={event.formlink}
+                    target="blank"
+                    className="bg-black text-white py-2 px-8 rounded duration-300"
+                  >
+                    Register
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

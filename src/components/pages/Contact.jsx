@@ -10,44 +10,17 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("message", formData.message);
-    const apiUrl =
-      "https://script.google.com/macros/s/AKfycbwTkMYxvD3FOYzrupF7mH7HNdlWdxr8gX28gzBE8w7NwsLBcW6mC4eM13_Uvni-ZNEDlQ/exec";
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        body: formDataToSend,
-      });
-
-      if (response.ok) {
-        alert("Message sent successfully");
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        alert("Failed to send message");
-      }
-    } catch (error) {
-      console.error("Error submitting form", error);
-      alert("Error submitting form");
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    window.location.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLSe_fz3kiciHuMxocAwUKnXD5B7txcjcN1bP9sMzHNGH5ruTDg/viewform";
   };
+
   return (
     <div className="Contact">
       <Navbar />
@@ -112,11 +85,12 @@ export default function Contact() {
               </div>
               <div className="w-[90%] h-[1px] bg-gray-600 my-6"></div>
             </div>
-            <input
-              name="Name"
+            <button
               type="submit"
               className="font-semibold border-2 border-black w-full sm:w-[200px] h-[50px] rounded-full duration-300 hover:bg-black hover:text-white cursor-pointer"
-            />
+            >
+              Submit
+            </button>
           </form>
           <div className="flex flex-col items-center gap-y-8">
             <div className="w-[90%] ml-10 flex flex-col gap-y-16">
@@ -137,13 +111,16 @@ export default function Contact() {
                 <h1 className="text-black text-md font-semibold">SOCIALS</h1>
                 <a
                   href="https://www.instagram.com/dice_cuiet/"
-                  target="blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 flex items-center"
                 >
                   <FaInstagram /> &nbsp; Instagram
                 </a>
                 <a
                   href="https://www.linkedin.com/in/dice-chitkara-university-12481b266/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 flex items-center"
                 >
                   <FaLinkedin /> &nbsp; LinkedIn
