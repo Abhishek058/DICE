@@ -16,49 +16,29 @@ html {
 }
 
 @keyframes slide {
-  0% {
+  0%, 14.29% {
     background-image: url("./assets/heroBg.jpeg");
   }
-  14.29% {
-    background-image: url("./assets/heroBg.jpeg");
-  }
-  14.3% {
+  14.3%, 28.57% {
     background-image: url("./assets/herobg2.jpg");
   }
-  28.57% {
-    background-image: url("./assets/herobg2.jpg");
-  }
-  28.58% {
+  28.58%, 42.86% {
     background-image: url("./assets/herobg3.jpg");
   }
-  42.86% {
-    background-image: url("./assets/herobg3.jpg");
-  }
-  42.87% {
+  42.87%, 57.14% {
     background-image: url("./assets/herobg4.jpg");
   }
-  57.14% {
-    background-image: url("./assets/herobg4.jpg");
-  }
-  57.15% {
+  57.15%, 71.43% {
     background-image: url("./assets/herobg5.jpg");
   }
-  71.43% {
-    background-image: url("./assets/herobg5.jpg");
-  }
-  71.44% {
+  71.44%, 85.71% {
     background-image: url("./assets/herobg6.jpg");
   }
-  85.71% {
-    background-image: url("./assets/herobg6.jpg");
-  }
-  85.72% {
-    background-image: url("./assets/herobg7.jpg");
-  }
-  100% {
+  85.72%, 100% {
     background-image: url("./assets/herobg7.jpg");
   }
 }
+
 
 
 .stretch {
