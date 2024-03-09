@@ -7,27 +7,32 @@ import { Link } from "react-router-dom";
 
 const OnGoingEvents = [
   {
-    name: "Event 1",
-    detail:
+    id: "1",
+    eventName: "Event 1",
+    eventDetail:
       " Immerse yourself in the fusion of gaming and education at the DICE-SKOAR Gamers Arcade on December 8, 2023, hosted at the Sportorium. Experience AR/VR gaming, PS5, and laptop gaming while discovering how these technologies can enhance your grasp of complex technical concepts. Engage in interactive sessions to gain insights into the future of learning. Witness thrilling online gaming competitions as 12 teams from Chitkara University compete for top honors, with cash prizes and goodies awaiting the champions. Join us for an unforgettable event, where fun meets learning in the digital realm.",
-    date: "2024-04-10 to 2024-04-15",
-    formlink: "https://forms.gle/GUpuxPVHiWgUavpG6",
+    eventDate: "2024-04-10 to 2024-04-15",
+    scriptUrl:
+      "https://script.google.com/macros/s/AKfycbxlhmdwJ3Kfvky5cDYcwExnFjs9NIXNyJ0EwwUveJ6BJFUnQHRPZzz2U4oyqMA5U3qV/exec",
   },
   {
-    name: "Event 2",
-    detail:
+    id: "2",
+    eventName: "Event 2",
+    eventDetail:
       "Dr. Talwar's leadership was pivotal in ensuring the event's success. Gratitude is extended to all members of DICE, the expert panel, and participants for their invaluable contributions. Special thanks to the management for their unwavering support. Experience Engineer's Day Calibration: a celebration of collaboration, innovation, and real-world engineering challenges.",
-    date: "2024-04-15 to 2024-04-25",
-    formlink: "https://forms.gle/GUpuxPVHiWgUavpG6",
+    eventDate: "2024-04-10 to 2024-04-15",
+    scriptUrl:
+      "https://script.google.com/macros/s/AKfycbxlhmdwJ3Kfvky5cDYcwExnFjs9NIXNyJ0EwwUveJ6BJFUnQHRPZzz2U4oyqMA5U3qV/exec",
   },
 ];
 const upcomingEvents = [
   {
-    name: "Event 2",
-    detail:
+    eventName: "Event 2",
+    eventDetail:
       "Dr. Talwar's leadership was pivotal in ensuring the event's success. Gratitude is extended to all members of DICE, the expert panel, and participants for their invaluable contributions. Special thanks to the management for their unwavering support. Experience Engineer's Day Calibration: a celebration of collaboration, innovation, and real-world engineering challenges.",
-    date: "2024-04-15 to 2024-04-25",
-    formlink: "",
+    eventDate: "2024-04-15 to 2024-04-25",
+    EventFormLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSe_fz3kiciHuMxocAwUKnXD5B7txcjcN1bP9sMzHNGH5ruTDg/viewform",
   },
 ];
 
@@ -50,18 +55,22 @@ export default function Event() {
               className="border border-black hover:shadow-blue-300 shadow-xl rounded-lg p-6 duration-500 hover:scale-105"
             >
               <div className="h-4/5">
-                <h2 className="text-xl font-semibold mb-4">{event.title}</h2>
-                <p className="text-3xl mb-2">
-                  <strong>{event.name}</strong>
-                </p>
+                <h2 className="font-semibold text-3xl mb-4">
+                  {event.eventName}
+                </h2>
                 <p className="text-gray-600 mb-2">
-                  <strong>Date</strong> {event.date}
+                  <strong>Date</strong> {event.eventDate}
                 </p>
-                <p className="text-gray-600 mb-2">{event.detail}</p>
+                <p className="text-gray-600 mb-2">{event.eventDetail}</p>
               </div>
               <div className="pt-8">
                 <Link
-                  to={event.formlink}
+                  to={{
+                    pathname: `/register/${encodeURIComponent(
+                      JSON.stringify(event)
+                    )}`,
+                    state: { event: event },
+                  }}
                   target="blank"
                   className="bg-black text-white py-2 px-8 rounded duration-300"
                 >
@@ -84,18 +93,20 @@ export default function Event() {
                 className="border border-black hover:shadow-blue-300 shadow-xl rounded-lg p-6 duration-500 hover:scale-105"
               >
                 <div className="h-4/5">
-                  <h2 className="text-xl font-semibold mb-4">{event.title}</h2>
+                  <h2 className="text-xl font-semibold mb-4">
+                    {event.eventName}
+                  </h2>
                   <p className="text-3xl mb-2">
                     <strong>{event.name}</strong>
                   </p>
                   <p className="text-gray-600 mb-2">
-                    <strong>Date</strong> {event.date}
+                    <strong>Date</strong> {event.eventDate}
                   </p>
-                  <p className="text-gray-600 mb-2">{event.detail}</p>
+                  <p className="text-gray-600 mb-2">{event.eventDetail}</p>
                 </div>
                 <div className="pt-8">
                   <Link
-                    to={event.formlink}
+                    to={event.EventFormLink}
                     target="blank"
                     className="bg-black text-white py-2 px-8 rounded duration-300"
                   >
