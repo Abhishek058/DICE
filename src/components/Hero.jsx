@@ -23,12 +23,14 @@ export default function Hero() {
             Know More
           </Link>
         </div>
-        <img
-          src="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/CU_logo-5.svg"
-          alt="Chitkara University Logo"
-          width={60}
-          className="absolute bottom-6 left-6"
-        />
+        <a href="https://www.chitkara.edu.in/">
+          <img
+            src="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/CU_logo-5.svg"
+            alt="Chitkara University Logo"
+            width={60}
+            className="absolute bottom-6 left-6 cursor-pointer"
+          />
+        </a>
       </div>
     </div>
   );

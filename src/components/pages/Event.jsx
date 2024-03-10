@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import FAQSection from "../FAQSection";
 import BlogSlider from "../BlogSlider";
 import { Link } from "react-router-dom";
+import diceVid3 from "../../assets/DiceVid3.mp4";
 
 const OnGoingEvents = [
   {
@@ -21,8 +22,7 @@ const OnGoingEvents = [
     eventDetail:
       "Dr. Talwar's leadership was pivotal in ensuring the event's success. Gratitude is extended to all members of DICE, the expert panel, and participants for their invaluable contributions. Special thanks to the management for their unwavering support. Experience Engineer's Day Calibration: a celebration of collaboration, innovation, and real-world engineering challenges.",
     eventDate: "2024-04-10 to 2024-04-15",
-    scriptUrl:
-      "https://script.google.com/macros/s/AKfycbxlhmdwJ3Kfvky5cDYcwExnFjs9NIXNyJ0EwwUveJ6BJFUnQHRPZzz2U4oyqMA5U3qV/exec",
+    scriptUrl: "",
   },
 ];
 const upcomingEvents = [
@@ -45,6 +45,33 @@ export default function Event() {
         <div>
           <BlogSlider />
         </div>
+        <div className="w-full flex flex-col md:flex-row items-center justify-center mb-28">
+          <div className="md:w-1/2 p-4">
+            <h1 className="text-3xl sm:text-4xl font-semibold mb-8">Some glimpse of our past events</h1>
+            <p className="text-gray-500 text-md sm:text-lg">
+              Embark on a visual journey through our past events, presented in a
+              captivating video. Each scene offers a glimpse into our history,
+              unfolding like a storybook. Experience our triumphs, setbacks, and
+              the unfolding of time through dynamic imagery and narration. Dive
+              into our narrative, where every frame reveals a piece of our
+              collective heritage. Showcasing vibrant collaboration among
+              students and faculty from diverse fields. Through projects,
+              competitions, and industry engagements, DICE fosters innovation
+              and cross-disciplinary learning, preparing students for dynamic
+              career paths aligned with the evolving demands of the industry.
+            </p>
+          </div>
+          <div className="md:w-1/2 flex items-center justify-center p-2">
+            <video
+              src={diceVid3}
+              className="rounded-full w-[350px] h-[550px] object-cover shadow-2xl"
+              autoPlay
+              muted
+              loop
+              controls
+            ></video>
+          </div>
+        </div>
       </div>
       <div className="container mx-auto">
         <h1 className="text-5xl font-semibold mb-12">Ongoing Events</h1>
@@ -63,7 +90,7 @@ export default function Event() {
                 </p>
                 <p className="text-gray-600 mb-2">{event.eventDetail}</p>
               </div>
-              <div className="pt-8">
+              <div className="pt-7">
                 <Link
                   to={{
                     pathname: `/register/${encodeURIComponent(
