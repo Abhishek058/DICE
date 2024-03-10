@@ -10,7 +10,7 @@ export default function Navbar() {
     { title: "About", path: "/about" },
     { title: "Blog", path: "/blog" },
     { title: "Events", path: "/event" },
-    { title: "Research", path: "/research" },
+    { title: "Achievements", path: "/research" },
     { title: "Contact", path: "/contact" },
   ];
 

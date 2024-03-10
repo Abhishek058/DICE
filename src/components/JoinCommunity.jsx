@@ -8,7 +8,7 @@ export default function JoinCommunity() {
         to="/event"
         className="font-medium text-white h-12 w-[170px] bg-red-600 rounded-full flex justify-center items-center animation-pulse"
       >
-        Join Community
+        Join DICE
       </Link>
     </div>
   );
