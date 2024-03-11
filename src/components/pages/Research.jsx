@@ -3,6 +3,127 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import FAQSection from "../FAQSection";
 
+const competitions = [
+  {
+    sno: 1,
+    name: "CentuRlTon Hackathon",
+    date: "25-27-Nov-2022",
+    organizedBy: "Ramaiyah Institute of Technology",
+    department: "Department of Electronics Communication Engineering",
+    venue: "Bengaluru",
+    participation: "Participation",
+  },
+  {
+    sno: 2,
+    name: "Tech. Future Hackathon",
+    date: "28-Nov-2022",
+    organizedBy: "Foundation for Innovation and Technology Transfer FITI",
+    department: "Department of Computer Engineering and Science",
+    venue: "FITT-IIT Delhi",
+    participation: "Participation",
+  },
+  {
+    sno: 3,
+    name: "Swach Technology Challenge",
+    date: "12-Dec-2022",
+    organizedBy: "Ministry of Housing & Urban Affairs",
+    department: "Hackathon",
+    venue: "Chandigarh",
+    participation: "Participation",
+  },
+  {
+    sno: 4,
+    name: "Tech. Hacks 3.0",
+    date: "7-Jan-2023",
+    organizedBy: "Department of Electronics Communication Engineering",
+    department: "India International Festival",
+    venue: "Punjab",
+    participation: "3rd Position",
+  },
+  {
+    sno: 5,
+    name: "Smart App Development",
+    date: "20-21-Jan-2023",
+    organizedBy: "Department of Computer Engineering and Science",
+    department: "Science",
+    venue: "Punjab",
+    participation: "Participation",
+  },
+  {
+    sno: 6,
+    name: "India International Festival",
+    date: "21-24-Jan-2023",
+    organizedBy:
+      "Ministry of Science & Technology, Department of Atomic Energy, Government of M.P. India",
+    department: "Science",
+    venue: "Bhopal",
+    participation: "Participation",
+  },
+  {
+    sno: 7,
+    name: "5th Technovation",
+    date: "30-Jan-4-Feb-2023",
+    organizedBy: "Sharda University",
+    department: "",
+    venue: "Greater Noida",
+    participation: "Participation",
+  },
+  {
+    sno: 8,
+    name: "Hackathon",
+    date: "19-21-Feb-2023",
+    organizedBy: "Chitkara University, Punjab",
+    department: "",
+    venue: "Rajpura",
+    participation: "2nd Position",
+  },
+  {
+    sno: 9,
+    name: "Chitkara Valorant Championship",
+    date: "29-Mar-2023",
+    organizedBy: "Indian Institute of Technology",
+    department: "",
+    venue: "Ropar",
+    participation: "Participation",
+  },
+  {
+    sno: 10,
+    name: "Energy Conservation Week",
+    date: "14-16-Apr-2023",
+    organizedBy: "Poornima College of Engineering",
+    department: "",
+    venue: "Jaipur",
+    participation: "3rd Position",
+  },
+  {
+    sno: 11,
+    name: "Hack IT Sapiens",
+    date: "30-Jun-01-July-2023",
+    organizedBy: "Chitkara University, Punjab",
+    department: "",
+    venue: "Rajpura",
+    participation: "2nd Position",
+  },
+  {
+    sno: 12,
+    name: "Hackathon Solution for Waste Reduction",
+    date: "15-Sep-2023",
+    organizedBy: "Chitkara University, Punjab",
+    department: "",
+    venue: "Rajpura",
+    participation: "1st and 2nd Position",
+  },
+  {
+    sno: 13,
+    name: "Engineer's Day Celebrations",
+    date: "18-19-Oct.-2023",
+    organizedBy: "Indian Society for Technical",
+    department: "",
+    venue: "S.B.S. State University",
+    participation: "3rd Position",
+  },
+];
+
 const publications = [
   {
     faculty: "Dr. Anupma, Dr. Shonak, Dr. Rachit",
@@ -73,7 +194,38 @@ export default function Research() {
       <Navbar />
       <div className="container mx-auto pt-40 py-8">
         <h1 className="text-5xl font-semibold text-center mb-12">
-          List of Publications
+          Competitions
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {competitions.map((competition, index) => (
+            <div
+              key={index}
+              className="border border-blue-300 rounded-lg p-6 duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            >
+              <h2 className="text-xl font-semibold mb-4">{competition.name}</h2>
+              <p className="text-gray-600 mb-2">
+                <strong>Date:</strong> {competition.date}
+              </p>
+              <p className="text-gray-600 mb-2">
+                <strong>Organized By:</strong> {competition.organizedBy}
+              </p>
+              <p className="text-gray-600 mb-2">
+                <strong>Department:</strong> {competition.department}
+              </p>
+              <p className="text-gray-600 mb-2">
+                <strong>Venue:</strong> {competition.venue}
+              </p>
+              <p className="text-gray-600 mb-2">
+                <strong>Participation/Position:</strong>{" "}
+                {competition.participation}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="container mx-auto pt-40 py-8">
+        <h1 className="text-5xl font-semibold text-center mb-12">
+          Publications
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {publications.map((publication, index) => (

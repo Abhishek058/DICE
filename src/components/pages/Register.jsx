@@ -27,6 +27,17 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (!formData.email.endsWith("@chitkara.edu.in")) {
+      alert("Please enter an email from @chitkara.edu.in domain.");
+      return;
+    }
+
     const formDataToSend = new FormData();
     for (let key in formData) {
       formDataToSend.append(key, formData[key]);
@@ -40,7 +51,7 @@ export default function Register() {
         body: formDataToSend,
       });
 
-      alert("Registration successfull");
+      alert("Registration successful");
       setFormData({
         name: "",
         email: "",
