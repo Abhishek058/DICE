@@ -9,7 +9,6 @@ const competitions = [
     name: "CentuRlTon Hackathon",
     date: "25-27-Nov-2022",
     organizedBy: "Ramaiyah Institute of Technology",
-    department: "Department of Electronics Communication Engineering",
     venue: "Bengaluru",
     participation: "Participation",
   },
@@ -18,7 +17,7 @@ const competitions = [
     name: "Tech. Future Hackathon",
     date: "28-Nov-2022",
     organizedBy: "Foundation for Innovation and Technology Transfer FITI",
-    department: "Department of Computer Engineering and Science",
+
     venue: "FITT-IIT Delhi",
     participation: "Participation",
   },
@@ -27,7 +26,7 @@ const competitions = [
     name: "Swach Technology Challenge",
     date: "12-Dec-2022",
     organizedBy: "Ministry of Housing & Urban Affairs",
-    department: "Hackathon",
+
     venue: "Chandigarh",
     participation: "Participation",
   },
@@ -36,7 +35,6 @@ const competitions = [
     name: "Tech. Hacks 3.0",
     date: "7-Jan-2023",
     organizedBy: "Department of Electronics Communication Engineering",
-    department: "India International Festival",
     venue: "Punjab",
     participation: "3rd Position",
   },
@@ -45,7 +43,7 @@ const competitions = [
     name: "Smart App Development",
     date: "20-21-Jan-2023",
     organizedBy: "Department of Computer Engineering and Science",
-    department: "Science",
+
     venue: "Punjab",
     participation: "Participation",
   },
@@ -55,7 +53,6 @@ const competitions = [
     date: "21-24-Jan-2023",
     organizedBy:
       "Ministry of Science & Technology, Department of Atomic Energy, Government of M.P. India",
-    department: "Science",
     venue: "Bhopal",
     participation: "Participation",
   },
@@ -64,7 +61,7 @@ const competitions = [
     name: "5th Technovation",
     date: "30-Jan-4-Feb-2023",
     organizedBy: "Sharda University",
-    department: "",
+
     venue: "Greater Noida",
     participation: "Participation",
   },
@@ -73,7 +70,6 @@ const competitions = [
     name: "Hackathon",
     date: "19-21-Feb-2023",
     organizedBy: "Chitkara University, Punjab",
-    department: "",
     venue: "Rajpura",
     participation: "2nd Position",
   },
@@ -82,7 +78,6 @@ const competitions = [
     name: "Chitkara Valorant Championship",
     date: "29-Mar-2023",
     organizedBy: "Indian Institute of Technology",
-    department: "",
     venue: "Ropar",
     participation: "Participation",
   },
@@ -91,7 +86,6 @@ const competitions = [
     name: "Energy Conservation Week",
     date: "14-16-Apr-2023",
     organizedBy: "Poornima College of Engineering",
-    department: "",
     venue: "Jaipur",
     participation: "3rd Position",
   },
@@ -100,7 +94,6 @@ const competitions = [
     name: "Hack IT Sapiens",
     date: "30-Jun-01-July-2023",
     organizedBy: "Chitkara University, Punjab",
-    department: "",
     venue: "Rajpura",
     participation: "2nd Position",
   },
@@ -109,7 +102,6 @@ const competitions = [
     name: "Hackathon Solution for Waste Reduction",
     date: "15-Sep-2023",
     organizedBy: "Chitkara University, Punjab",
-    department: "",
     venue: "Rajpura",
     participation: "1st and 2nd Position",
   },
@@ -118,7 +110,6 @@ const competitions = [
     name: "Engineer's Day Celebrations",
     date: "18-19-Oct.-2023",
     organizedBy: "Indian Society for Technical",
-    department: "",
     venue: "S.B.S. State University",
     participation: "3rd Position",
   },
@@ -209,9 +200,7 @@ export default function Research() {
               <p className="text-gray-600 mb-2">
                 <strong>Organized By:</strong> {competition.organizedBy}
               </p>
-              <p className="text-gray-600 mb-2">
-                <strong>Department:</strong> {competition.department}
-              </p>
+
               <p className="text-gray-600 mb-2">
                 <strong>Venue:</strong> {competition.venue}
               </p>
