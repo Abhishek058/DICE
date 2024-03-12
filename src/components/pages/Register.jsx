@@ -10,7 +10,7 @@ export default function Register() {
     name: "",
     email: "",
     rollno: "",
-    message: "",
+    hostllerOrDayScholar: "",
     mobile: "",
     branch: "",
     semester: "",
@@ -56,7 +56,7 @@ export default function Register() {
         name: "",
         email: "",
         rollno: "",
-        message: "",
+        hostllerOrDayScholar: "",
         mobile: "",
         branch: "",
         semester: "",
@@ -68,12 +68,13 @@ export default function Register() {
   };
 
   const inputFields = [
-    { label: "Name *", name: "name", type: "text" },
-    { label: "Email *", name: "email", type: "email" },
-    { label: "Roll Number *", name: "rollno", type: "text" },
-    { label: "Mobile Number *", name: "mobile", type: "text" },
-    { label: "Branch *", name: "branch", type: "text" },
-    { label: "Semester *", name: "semester", type: "text" },
+    { label: "Name", name: "name", type: "text" },
+    { label: "Email", name: "email", type: "email" },
+    { label: "Roll Number", name: "rollno", type: "text" },
+    { label: "Hostller / Day Scholar", name: "hostllerOrDayScholar", type: "text" },
+    { label: "Mobile Number", name: "mobile", type: "text" },
+    { label: "Branch", name: "branch", type: "text" },
+    { label: "Semester", name: "semester", type: "text" },
   ];
 
   return (
@@ -98,7 +99,7 @@ export default function Register() {
                   {field.label}
                 </p>
                 <input
-                  placeholder={field.label}
+                  placeholder={`${field.label} *`}
                   type={field.type}
                   name={field.name}
                   value={formData[field.name]}
