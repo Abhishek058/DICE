@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
-import { FaInstagram, FaLinkedin } from "react-icons/fa6";
+import {
+  FaGraduationCap,
+  FaInstagram,
+  FaLinkedin,
+  FaPhone,
+} from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
 import Footer from "../Footer";
 
 export default function Contact() {
@@ -98,8 +104,24 @@ export default function Contact() {
                 <h1 className="text-black text-md font-semibold">
                   CONTACT DETAILS
                 </h1>
-                <h1 className="text-gray-600">dice@chitkara.edu.in</h1>
-                <h1 className="text-gray-600">+91 7015745045</h1>
+                <h1 className="text-gray-600">
+                  <a
+                    href="mailto:dice@chitkara.edu.in"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 flex items-center hover:text-green-600"
+                  >
+                    <IoIosMail /> &nbsp; dice@chitkara.edu.in
+                  </a>
+                </h1>
+                <h1 className="text-gray-600">
+                  <a
+                    href="tel:+917015745045"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 flex items-center hover:text-blue-600"
+                  >
+                    <FaPhone /> &nbsp; +91 7015745045
+                  </a>
+                </h1>
               </div>
               <div className="flex flex-col gap-y-2">
                 <h1 className="text-black text-md font-semibold">ADDRESS</h1>
@@ -113,7 +135,7 @@ export default function Contact() {
                   href="https://www.instagram.com/dice_cuiet/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 flex items-center"
+                  className="text-gray-600 flex items-center hover:text-pink-600"
                 >
                   <FaInstagram /> &nbsp; Instagram
                 </a>
@@ -121,9 +143,17 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/dice-chitkara-university-12481b266/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 flex items-center"
+                  className="text-gray-600 flex items-center hover:text-blue-600"
                 >
                   <FaLinkedin /> &nbsp; LinkedIn
+                </a>
+                <a
+                  href="https://www.chitkara.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 flex items-center hover:text-red-600"
+                >
+                  <FaGraduationCap /> &nbsp; Chitkara University
                 </a>
               </div>
             </div>
