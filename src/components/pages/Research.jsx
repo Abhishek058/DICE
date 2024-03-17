@@ -2,6 +2,19 @@ import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import FAQSection from "../FAQSection";
+import comp1 from "../../assets/comp1.png";
+import comp2 from "../../assets/comp2.png";
+import comp3 from "../../assets/comp3.png";
+import comp4 from "../../assets/comp4.png";
+import comp5 from "../../assets/comp5.png";
+import comp6 from "../../assets/comp6.png";
+import comp7 from "../../assets/comp7.png";
+import comp8 from "../../assets/comp8.jpg";
+import comp9 from "../../assets/comp9.png";
+import comp10 from "../../assets/comp10.png";
+import comp11 from "../../assets/comp11.jpg";
+import comp12 from "../../assets/comp12.png";
+import comp13 from "../../assets/comp13.png";
 
 const competitions = [
   {
@@ -11,6 +24,7 @@ const competitions = [
     organizedBy: "Ramaiyah Institute of Technology",
     venue: "Bengaluru",
     participation: "Participation",
+    imageSrc: comp1,
   },
   {
     sno: 2,
@@ -19,6 +33,7 @@ const competitions = [
     organizedBy: "Foundation for Innovation and Technology Transfer FITI",
     venue: "FITT-IIT Delhi",
     participation: "Participation",
+    imageSrc: comp2,
   },
   {
     sno: 3,
@@ -27,6 +42,7 @@ const competitions = [
     organizedBy: "Ministry of Housing & Urban Affairs",
     venue: "Chandigarh",
     participation: "Participation",
+    imageSrc: comp3,
   },
   {
     sno: 4,
@@ -35,6 +51,7 @@ const competitions = [
     organizedBy: "Department of Electronics and Communication Engineering",
     venue: "Punjab",
     participation: "3rd Position",
+    imageSrc: comp4,
   },
   {
     sno: 5,
@@ -43,6 +60,7 @@ const competitions = [
     organizedBy: "Department of Computer Engineering and Science",
     venue: "Punjab",
     participation: "Participation",
+    imageSrc: comp5,
   },
   {
     sno: 6,
@@ -52,6 +70,7 @@ const competitions = [
       "Ministry of Science & Technology, Department of Atomic Energy, Government of M.P. India",
     venue: "Bhopal",
     participation: "Participation",
+    imageSrc: comp13,
   },
   {
     sno: 7,
@@ -60,6 +79,7 @@ const competitions = [
     organizedBy: "Sharda University",
     venue: "Greater Noida",
     participation: "Participation",
+    imageSrc: comp6,
   },
   {
     sno: 8,
@@ -68,6 +88,7 @@ const competitions = [
     organizedBy: "Chitkara University, Punjab",
     venue: "Rajpura",
     participation: "2nd Position",
+    imageSrc: comp7,
   },
   {
     sno: 9,
@@ -76,6 +97,7 @@ const competitions = [
     organizedBy: "Indian Institute of Technology",
     venue: "Ropar",
     participation: "Participation",
+    imageSrc: comp8,
   },
   {
     sno: 10,
@@ -84,6 +106,7 @@ const competitions = [
     organizedBy: "Poornima College of Engineering",
     venue: "Jaipur",
     participation: "1st and 2nd Position",
+    imageSrc: comp9,
   },
   {
     sno: 11,
@@ -92,6 +115,7 @@ const competitions = [
     organizedBy: "Chitkara University, Punjab",
     venue: "Rajpura",
     participation: "3rd Position",
+    imageSrc: comp10,
   },
   {
     sno: 12,
@@ -100,6 +124,7 @@ const competitions = [
     organizedBy: "Chitkara University, Punjab",
     venue: "Rajpura",
     participation: "2nd Position",
+    imageSrc: comp11,
   },
   {
     sno: 13,
@@ -108,6 +133,7 @@ const competitions = [
     organizedBy: "Indian Society for Technical Education",
     venue: "S.B.S. State University",
     participation: "1st, 2nd, 3rd Position",
+    imageSrc: comp12,
   },
 ];
 
@@ -189,6 +215,11 @@ export default function Research() {
               key={index}
               className="border border-blue-300 rounded-lg p-6 duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
             >
+              <img
+                src={competition.imageSrc}
+                alt={competition.name}
+                className="w-full h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto mb-4 rounded"
+              />
               <h2 className="text-xl font-semibold mb-4">{competition.name}</h2>
               <p className="text-gray-600 mb-2">
                 <strong>Date:</strong> {competition.date}
@@ -196,7 +227,6 @@ export default function Research() {
               <p className="text-gray-600 mb-2">
                 <strong>Organized By:</strong> {competition.organizedBy}
               </p>
-
               <p className="text-gray-600 mb-2">
                 <strong>Venue:</strong> {competition.venue}
               </p>
