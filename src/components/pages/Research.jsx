@@ -23,7 +23,7 @@ const competitions = [
     date: "25-27-Nov-2022",
     organizedBy: "Ramaiyah Institute of Technology",
     venue: "Bengaluru",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp1,
   },
   {
@@ -32,7 +32,7 @@ const competitions = [
     date: "28-Nov-2022",
     organizedBy: "Foundation for Innovation and Technology Transfer FITI",
     venue: "FITT-IIT Delhi",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp2,
   },
   {
@@ -41,7 +41,7 @@ const competitions = [
     date: "12-Dec-2022",
     organizedBy: "Ministry of Housing & Urban Affairs",
     venue: "Chandigarh",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp3,
   },
   {
@@ -59,7 +59,7 @@ const competitions = [
     date: "20-21-Jan-2023",
     organizedBy: "Department of Computer Engineering and Science",
     venue: "Punjab",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp5,
   },
   {
@@ -69,7 +69,7 @@ const competitions = [
     organizedBy:
       "Ministry of Science & Technology, Department of Atomic Energy, Government of M.P. India",
     venue: "Bhopal",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp13,
   },
   {
@@ -78,7 +78,7 @@ const competitions = [
     date: "30-Jan-4-Feb-2023",
     organizedBy: "Sharda University",
     venue: "Greater Noida",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp6,
   },
   {
@@ -96,7 +96,7 @@ const competitions = [
     date: "29-Mar-2023",
     organizedBy: "Indian Institute of Technology",
     venue: "Ropar",
-    participation: "Participation",
+    participation: "3rd Position",
     imageSrc: comp8,
   },
   {
