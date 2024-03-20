@@ -29,14 +29,16 @@ export default function About() {
   return (
     <div>
       <Navbar />
-      <div className="h-[470px] bg-red-200 flex flex-col items-center justify-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-center">
-          Welcome to the DICE community
-        </h1>
-        <p className="text-lg sm:text-xl lg:text-2xl translate-y-8">
-          {" "}
-          Where Ideas Meet Innovation
-        </p>
+      <div className="aboutHero">
+        <div className="h-[550px] bg-black bg-opacity-50 flex flex-col items-center justify-center">
+          <h1 className="text-4xl text-white sm:text-5xl lg:text-7xl font-bold text-center">
+            Welcome to the DICE community
+          </h1>
+          <p className="text-lg text-white sm:text-xl lg:text-2xl translate-y-8">
+            {" "}
+            Where Ideas Meet Innovation
+          </p>
+        </div>
       </div>
       <div className="p-8 py-20 flex flex-col lg:flex-row items-center justify-center gap-x-24">
         <div className="lg:w-1/2">

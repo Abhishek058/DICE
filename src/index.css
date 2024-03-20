@@ -101,6 +101,13 @@ html {
   background-position: center;
 }
 
+.aboutHero{
+  background-image: url("https://lh5.googleusercontent.com/p/AF1QipNE9uw_rVqgH7aQEdIw1PjVERXRPItNwYNmoiOg=s709-k-no");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar {
   background: transparent;
   width: 10px;
