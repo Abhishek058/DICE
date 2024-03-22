@@ -79,7 +79,7 @@ const Blog = () => {
     <div className="Blogs">
       <Navbar />
       <div className="w-[90%] mx-auto px-4 py-8 pt-40">
-        <h1 className="text-5xl font-bold mb-8 text-center">Blogs</h1>
+        <h1 className="text-5xl font-bold mb-8 text-center">Projects & National Events</h1>
         {blogs.map((blog, index) => (
           <div
             key={index}

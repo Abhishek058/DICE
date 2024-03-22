@@ -40,7 +40,7 @@ export default function Event() {
     <div className="Events">
       <Navbar />
       <div className="container mx-auto pt-40">
-        <h1 className="text-5xl font-semibold mb-12">Past Events</h1>
+        <h1 className="text-4xl font-semibold mb-12 sm:text-5xl text-center">Past Events</h1>
         <div>
           <BlogSlider />
         </div>
@@ -65,7 +65,7 @@ export default function Event() {
           <div className="md:w-1/2 flex items-center justify-center p-2">
             <video
               src={diceVid3}
-              className="rounded-full w-[350px] h-[550px] object-cover shadow-2xl"
+              className="rounded-full w-[320px] h-[520px] object-cover shadow-2xl"
               autoPlay
               muted
               loop
@@ -74,8 +74,8 @@ export default function Event() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
-        <h1 className="text-5xl font-semibold mb-12">Ongoing Events</h1>
+      <div className="container mx-auto p-4">
+        <h1 className="text-4xl font-semibold mb-12 sm:text-5xl">Ongoing Events</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {OnGoingEvents.map((event, index) => (
             <div
@@ -109,8 +109,8 @@ export default function Event() {
           ))}
         </div>
       </div>
-      <div className="container mx-auto pt-40 py-8">
-        <h1 className="text-5xl font-semibold mb-12">Upcoming Events</h1>
+      <div className="container mx-auto pt-40 py-8 p-4">
+        <h1 className="text-4xl font-semibold mb-12 sm:text-5xl">Upcoming Events</h1>
         {upcomingEvents.length === 0 ? (
           <p className="text-2xl text-center">We will be organizing soon</p>
         ) : (
